@@ -10,14 +10,13 @@ fn factorial(number: u128) -> u128{
 
 fn main(){
 
+    println!("Input a number:");
     let mut num = String::new();
     io::stdin()
         .read_line(&mut num)
         .expect("Failed to read from stdin");
-        println!("{num:?}"); // or dbg!(num);
     
     let number: u128 = num.trim().parse().unwrap();
-    println!("{num:?}");
 
     println!("You input {}.", number);
 
